@@ -16,5 +16,4 @@ public class Fish {
     public String getName() {
         return type;
     }   
-    //hello
 }
