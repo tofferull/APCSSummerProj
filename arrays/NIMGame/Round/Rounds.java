@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import arrays.NIMGame.DisplayParts.Pile;
 import arrays.NIMGame.DisplayParts.Winner;
 import arrays.NIMGame.Utilities.Util.lockPanel;
-
+import arrays.NIMGame.Utilities.ErrorLabel;
 
 public class Rounds extends JButton {
     private static final int width = 100, height = 50;
@@ -32,6 +32,10 @@ public class Rounds extends JButton {
 
     public void endTurn(ActionEvent e) {
         if (e.getSource() == this) {
+            if (UpdateScore.getScore() == 0) {
+                ErrorLabel.showError("Can not end turn without removing any stones");
+                return;
+            }
             if (Pile.getAmount() == 1) {
                 System.out.println("WINNER FOUND");
                 Winner.showWinner(UpdateScore.getTurn());

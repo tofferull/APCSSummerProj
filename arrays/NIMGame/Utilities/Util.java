@@ -48,10 +48,7 @@ public class Util {
         public boolean isInPanel(MouseEvent e) {
             int x = e.getLocationOnScreen().x;
 
-            if (x > pX && x < pX + width)
-                return true;
-
-            return false;
+            return x > pX && x < pX + width;
         }
 
         public static void reset() {

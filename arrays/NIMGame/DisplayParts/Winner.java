@@ -84,5 +84,4 @@ public class Winner extends Panels {
          */
         removeWinner();
     }
-
 }

@@ -59,7 +59,8 @@ public class Entity extends JLabel {
                 */
                 UpdateScore.addCount();
                 Pile.removeCount();
-            }
+            } else
+                ErrorLabel.showError("Can only select stone within the stone pile.");
         }
         public void mouseEntered(MouseEvent e) {
             getLabel().setIcon(stoneH);

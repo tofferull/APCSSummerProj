@@ -1,7 +1,9 @@
+
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Reverse {
+public class ReverseArray {
     private static final String sentinel = "/";
 
     public static void main(String args[]) {
