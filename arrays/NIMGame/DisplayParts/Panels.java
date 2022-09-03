@@ -5,7 +5,7 @@ import java.awt.Color;
 import javax.swing.JPanel;
 
 
-public class Panels extends JPanel {
+public abstract class Panels extends JPanel {
     private JPanel panel;
     private int width;
 

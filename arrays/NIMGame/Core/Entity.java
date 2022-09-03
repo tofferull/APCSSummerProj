@@ -16,11 +16,11 @@ import arrays.NIMGame.Utilities.Util;
 import arrays.NIMGame.Utilities.Util.lockPanel;
 
 public class Entity extends JLabel {
-    private final int multiple = 6;
-    private final int width = 11 * multiple;
-    private final int height = 14 * multiple;
-    private final ImageIcon stoneH = Util.resize("highlighted-stone.png", width, height);
-    private final ImageIcon stone = Util.resize("usable-stone.png", width, height);
+    private static final int multiple = 6;
+    private static final int width = 11 * multiple;
+    private static final int height = 14 * multiple;
+    private static final ImageIcon stoneH = Util.resize("highlighted-stone.png", width, height);
+    private static final ImageIcon stone = Util.resize("usable-stone.png", width, height);
     // 11/14 ratio estimated
     private static ArrayList<Entity> entities = new ArrayList<>();
     private JPanel panel;
