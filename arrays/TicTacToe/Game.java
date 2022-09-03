@@ -58,7 +58,7 @@ public class Game {
 
     public boolean findWinner() {
         int[][] b = board.getBoard();
-        for (int i = 0; i < b.length; i++) { //horizontal win
+        for (int i = 0; i < b.length; i++) {
             int hRes = Checker.hLine(b[i]);
             int vRes = Checker.vLine(b, i);
             int lRes = Checker.dLeftLine(b);

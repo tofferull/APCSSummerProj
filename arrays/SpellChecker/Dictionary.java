@@ -35,11 +35,11 @@ public class Dictionary {
     }
 
     public boolean findCloseMatch() {
+        Pattern pattern = Pattern.compile(userWord, Pattern.CASE_INSENSITIVE);
         for (int i = 0; i < 20; i++) {
             Word word = dictionary[i];
             String w = word.getWord();
             for (int j = 0; j < userWord.length(); j++) {
-                Pattern pattern = Pattern.compile(userWord, Pattern.CASE_INSENSITIVE);
                 Matcher matcher = pattern.matcher(w);
                 if (matcher.find()) word.addStrength(userWord.length());
                 for (int g = 0; g < w.length(); g++) {

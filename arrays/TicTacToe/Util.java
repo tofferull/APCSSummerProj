@@ -50,4 +50,22 @@ public class Util {
 
         return continuePlaying(reader);
     }
+
+    private static boolean betterIsInt(String str) {
+        if (str == null) return false;
+        int len = str.length();
+        if (len == 0) return false;
+        
+        int idx = 0;
+        if (str.charAt(0) == '-') {
+            if (len == 1) return false;
+            idx = 1;
+        }
+
+        for (; idx < len; idx++) {
+            char c = str.charAt(idx);
+            if (c <'0' || c > '9') return false;
+        }
+        return true;
+    }
 }

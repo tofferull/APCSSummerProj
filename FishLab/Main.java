@@ -8,5 +8,8 @@ public class Main {
         boolean isFound = LOF.findFish("catfish");
         if (isFound) System.out.println("we found your fish");
         else System.out.println("your fish is not in the lake");
+
+        String a = "a";
+        String b = a.charAt(0) + "";
     }
 }
