@@ -1,5 +1,3 @@
-package arrays.ReverseArrays;
-
 import java.util.Scanner;
 import java.util.ArrayList;
 
