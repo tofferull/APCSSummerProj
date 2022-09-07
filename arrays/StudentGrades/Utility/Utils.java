@@ -1,4 +1,4 @@
-package arrays.StudentGradesSortComparison.Utility;
+package arrays.StudentGrades.Utility;
 
 import java.io.FileWriter;
 import java.io.IOException;

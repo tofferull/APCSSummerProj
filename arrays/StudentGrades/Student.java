@@ -1,9 +1,9 @@
-package arrays.StudentGradesSortComparison;
+package arrays.StudentGrades;
 
 import java.util.Arrays;
 
-import arrays.StudentGradesSortComparison.Utility.Info;
-import arrays.StudentGradesSortComparison.Utility.Utils;
+import arrays.StudentGrades.Utility.Info;
+import arrays.StudentGrades.Utility.Utils;
 
 public class Student {
     private static Info[] info = new Info[10000];
@@ -20,17 +20,17 @@ public class Student {
         studentCount++;
     }
 
-    public void binarySort() {
+    public static void timSort() {
         recreated = Arrays.copyOfRange(info, 0, studentCount);
         Arrays.sort(recreated);
     }
 
-    public void bubbleSort() {
+    public static void bubbleSort() {
         recreated = Arrays.copyOfRange(info, 0, studentCount);
         Utils.bubbleSort(recreated);
     }
 
-    public void print() {
+    public static void print() {
         for (int i = 0; i < studentCount; i++) {
             Info d = recreated[i];
             System.out.println(d.getName() + ": " + d.getNum());

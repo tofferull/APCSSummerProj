@@ -1,24 +1,29 @@
-package arrays.StudentGradesSortComparison;
+package arrays.StudentGrades;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-import arrays.StudentGradesSortComparison.Utility.Utils;
+import arrays.StudentGrades.Utility.Utils;
 
 import java.io.File;
 
 public class Main {
     private static final int MAX = 10000;
+    private static final int DEFAULT = 25;
     public static void main(String args[]) {
         try {
-            File file = new File("arrays\\StudentGradesSortComparison\\Grades.txt");
+            File file = new File("arrays\\StudentGrades\\Grades.txt");
+            if (!file.createNewFile()) {
+                file.delete();
+                file.createNewFile();
+            }
 
-            Utils.genGrades(MAX);
+            Utils.genGrades(DEFAULT);
 
             Scanner read = new Scanner(file);
-            Student s[] = new Student[MAX];
+            Student s[] = new Student[DEFAULT];
 
-            for (int i = 0; read.hasNextLine() && i < MAX; i++) {
+            for (int i = 0; read.hasNextLine() && i < DEFAULT; i++) {
                 String[] student = read.nextLine().split(" ");
                 String name = student[0];
                 String[] grades = Arrays.copyOfRange(student, 1, 6);
@@ -26,16 +31,10 @@ public class Main {
             }
 
             read.close();
-
-            Student student = s[0];
-
-            Utils.startTime();
-
-            student.bubbleSort();
-            //student.binarySort();
-            student.print();
-
-            Utils.endTime();
+            
+            Student.bubbleSort();
+            //Student.timSort();
+            Student.print();
 
         } catch (Exception e) {
             System.out.println("Error");

@@ -1,10 +1,12 @@
+package arrays.ReverseArrays;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class ReverseArray {
     private static final String sentinel = "/";
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             Scanner reader = new Scanner(System.in);
             ArrayList<String> arr = new ArrayList<>();

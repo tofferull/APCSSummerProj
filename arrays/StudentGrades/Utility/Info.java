@@ -1,4 +1,4 @@
-package arrays.StudentGradesSortComparison.Utility;
+package arrays.StudentGrades.Utility;
 
 public class Info implements Comparable<Info> {
     private double num;
