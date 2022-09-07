@@ -41,7 +41,7 @@ public class Poe {
         String[] tSort = Algs.timSort(words);
 
         // binary search
-        String wordToFind = "eleventh";
+        String wordToFind = "requiescat";
 
         long start = System.nanoTime();
         int idx = Algs.binarySearch(tSort, wordToFind, 0, tSort.length - 1); // sorted array

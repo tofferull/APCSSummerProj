@@ -19,7 +19,7 @@ public class Algs {
         System.out.println("BubbleSort elasped: "+(endTime - startTime)+ " ns");
         return words;
     }
-    public static String[] timSort(String[] words) {
+    public static String[] timSort(String[] words) { //too fast that ms can't see it
         long startTime = System.nanoTime();
         Arrays.sort(words);
         long endTime = System.nanoTime();
@@ -51,7 +51,7 @@ public class Algs {
                 return i;
             }
         }
-        System.out.println("Linear Search elasped: "+(System.nanoTime() - start)+" ns");
+        System.out.println("Linear Search elasped: "+(System.currentTimeMillis() - start)+" ns");
         return -1;
     }
 }
